@@ -1,1 +1,7 @@
-<p>read works!</p>
+<ul>
+<li *ngFor="let game of myGames">
+<p>{{game.Title}}</p>
+<p>{{game.Year}}</p>
+<img src="{{game.Poster}}" width="150" height="150">
+</li>
+</ul>
