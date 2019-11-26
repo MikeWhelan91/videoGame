@@ -12,4 +12,6 @@ export class GameServiceService {
 getgames(): Observable <any>{
   return this.httpc.get('https://jsonblob.com/9417cbbe-108a-11ea-827d-a3afa4296f98')
   }
+
+  
 }
