@@ -4,6 +4,7 @@ import {ReadComponent} from './read/read.component';
 import {CreateComponent} from './create/create.component';
 
 
+
 const routes: Routes = [
   {
     path: 'read',

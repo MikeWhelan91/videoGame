@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {GameServiceService} from '../services/game-service.service';
 
+
 @Component({
   selector: 'app-read',
   templateUrl: './read.component.html',
@@ -13,7 +14,7 @@ export class ReadComponent implements OnInit {
 
   ngOnInit() {
 
-    this.gameService.getGameInformation().subscribe(data => {
+    this.gameService.GetGameInformation().subscribe(data => {
         this.myGames = data.games;
         });
     }
