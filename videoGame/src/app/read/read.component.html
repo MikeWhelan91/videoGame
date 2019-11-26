@@ -1,7 +1,17 @@
-<ul>
-<li *ngFor="let game of myGames">
-<p>{{game.Title}}</p>
-<p>{{game.Year}}</p>
-<img src="{{game.Poster}}" width="150" height="150">
-</li>
-</ul>
+<mat-accordion *ngFor="let movie of myGames">
+<mat-expansion-panel [expanded]="true" >
+<mat-expansion-panel-header>
+<mat-panel-title>
+<h3> {{ game.Title }} </h3>
+</mat-panel-title>
+<mat-panel-description>
+<h3>{{ game.Year }}</h3>
+</mat-panel-description>
+</mat-expansion-panel-header>
+<img src="{{game.Poster}}">
+<mat-action-row>
+<button mat-button color="primary">EDIT</button>
+<button mat-button color="warn">DELETE</button>
+</mat-action-row>
+</mat-expansion-panel>
+</mat-accordion>

@@ -14,6 +14,7 @@ export class ReadComponent implements OnInit {
   ngOnInit() {
     this.gameService.getgames().subscribe((data) => {
       this.myGames = data.Search;
+      console.log(this.myGames);
       });
-      }
-      }
+    }
+  }
