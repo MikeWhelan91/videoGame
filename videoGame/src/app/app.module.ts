@@ -14,12 +14,14 @@ import {
   } from '@angular/material';
 import { CreateComponent } from './create/create.component';
 import {FormsModule} from '@angular/forms';
+import { EditComponent } from './edit/edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReadComponent,
-    CreateComponent
+    CreateComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,
