@@ -10,12 +10,12 @@ import {GameServiceService} from '../services/game-service.service';
 export class ReadComponent implements OnInit {
 
   constructor( private gameService: GameServiceService) { }
-  myGames: any;
+  MyGames: any;
 
   ngOnInit() {
 
     this.gameService.getGameInformation().subscribe(data => {
-        this.myGames = data.games;
+        this.MyGames = data.games;
         });
     }
   }

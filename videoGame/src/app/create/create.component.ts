@@ -16,7 +16,7 @@ export class CreateComponent implements OnInit {
 
   onAddGame(form: NgForm) {
     console.log(form.value);
-    form.resetForm();
+
 
     this.gameService.AddGameInformation(form.value.title,
       form.value.year, form.value.poster).subscribe();

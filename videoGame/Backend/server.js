@@ -43,24 +43,7 @@ app.get('/api/games', (req, res, next) => {
     })
 })
 
-app.delete('/api/games/:id', (req, res) => {
-    console.log(req.params.id);
 
-    GameModel.deleteOne({ _id: req.params.id }, (error, data) => {
-        if (error)
-            res.json(error);
-
-        res.json(data);
-    })
-})
-
-app.get('/api/games/:id', (req, res, next) => {
-    console.log(req.params.id);
-    MovieModel.findById(req.params.id,
-        function (err, data) {
-            res.json(data);
-        });
-})
 app.put('/api/games/:id', function (req, res) {
     console.log("Update Game " + req.params.id);
     console.log(req.body);
@@ -99,11 +82,6 @@ app.get('/api/games/:id', (req, res) => {
     GameModel.findById(req.params.id, (err, data) => {
         res.json(data);
     })
-})
-
-app.use("/", express.static(path.join(__dirname, "angular")));
-app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, "angular", "index.html"));
 })
 
 
