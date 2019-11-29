@@ -21,4 +21,14 @@ export class GameServiceService {
     return this.http.post('http://localhost:4000/api/games', game); }
 
 
+    getGame(id: string): Observable<any> {
+      return this.http.get('http://localhost:4000/api/games/' + id);
+      }
+
+                updateGame(id: string, title: string, year: string, poster: string): Observable<any> {
+                const movie: Game = { title: title, year: year, poster: poster };
+                return this.http.put('http://localhost:4000/api/games/' + id, movie);
+                }
+
+
 }

@@ -8,13 +8,13 @@ import {GameServiceService} from '../services/game-service.service';
   styleUrls: ['./read.component.css']
 })
 export class ReadComponent implements OnInit {
-
+MyGames: any;
   constructor( private gameService: GameServiceService) { }
-  MyGames: any;
+
 
   ngOnInit() {
 
-    this.gameService.getGameInformation().subscribe(data => {
+    this.gameService.getGameInformation().subscribe((data) => {
         this.MyGames = data.games;
         });
     }

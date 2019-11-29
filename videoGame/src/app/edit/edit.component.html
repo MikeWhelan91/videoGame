@@ -1,1 +1,17 @@
-<p>edit works!</p>
+<mat-card>
+    <form (submit)="onEditGame(gameForm)" #gameForm="ngForm">
+        <mat-form-field>
+            <label> Game Title</label>
+            <input matInput type="text" name="title" ngModel={{game.title}} required #title="ngModel">
+        </mat-form-field>
+        <mat-form-field>
+            <label>Game Year</label>
+            <textarea matInput name="year" ngModel={{game.year}} required #content="ngModel"></textarea>
+        </mat-form-field>
+        <mat-form-field>
+            <label>Game Poster</label>
+            <textarea matInput rows="4" name="poster" ngModel={{game.poster}} required #content="ngModel"></textarea>
+        </mat-form-field>
+        <button mat-raised-button color="accent" type="submit">Update Game</button>
+    </form>
+</mat-card>

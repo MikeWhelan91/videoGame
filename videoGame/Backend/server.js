@@ -35,13 +35,13 @@ app.get('/', (req, res) => {
     res.send('hello world');
 })
 
-app.get('/api/games', (req, res, next) => {
-
-    console.log("get request")
-    GameModel.find((err, data) => {
-        res.json({ games: data });
-    })
-})
+app.get('/api/games/:id', (req, res, next) => {
+    console.log(req.params.id);
+    GameModel.findById(req.params.id,
+      function (err, data) {
+        res.json(data);
+      });
+  })
 
 
 app.put('/api/games/:id', function (req, res) {
@@ -83,7 +83,6 @@ app.get('/api/games/:id', (req, res) => {
         res.json(data);
     })
 })
-
 
 
 
