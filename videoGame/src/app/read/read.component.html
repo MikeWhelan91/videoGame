@@ -8,9 +8,10 @@
                 <h3>{{ game.year }}</h3>
             </mat-panel-description>
         </mat-expansion-panel-header>
-        <img src="{{game.poster}}">
+        <img src='{{game.poster}}'>
         <mat-action-row>
-  <button mat-button [routerLink]="['/edit', game._id]" color="primary">EDIT</button>            <button mat-button color="warn">DELETE</button>
+  <button mat-button [routerLink]="['/edit', game._id]" color="primary">EDIT</button>
+  <button mat-button (click)="onDelete(game._id)" color="warn">DELETE</button>
         </mat-action-row>
     </mat-expansion-panel>
 </mat-accordion>

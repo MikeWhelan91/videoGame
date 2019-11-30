@@ -16,11 +16,10 @@ export class EditComponent implements OnInit {
 
   ngOnInit() {
     /* tslint:disable:no-string-literal */
-    this.gameService.getGame(this.route.snapshot.params['id']).subscribe(data =>
-      {
+    this.gameService.getGame(this.route.snapshot.params['id']).subscribe(data => {
       this.game = data;
       console.log(this.game);
-      })
+      });
   }
 
   onEditGame(form: NgForm) {

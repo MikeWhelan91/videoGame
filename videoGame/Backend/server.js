@@ -22,26 +22,45 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-    res.header("Access-Control-Allow-Headers",
-        "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-});
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.header("Access-Control-Allow-Headers",
+  "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+  });
 
 // respond with "hello world" when a GET request is made to the homepage
 app.get('/', (req, res) => {
     res.send('hello world');
 })
 
+app.get('/api/games', (req, res, next) => {
+
+    console.log("get request")
+    GameModel.find((err, data) => {
+        res.json({ games: data });
+    })
+})
+
+
+app.delete('/api/games/:id', (req,res) => {
+    console.log(req.params.id);
+   GameModel.deleteOne({_id:req.params.id},(error,data) => {
+     if(error)
+     res.json(error);
+  
+      res.json(data);
+    })
+  })
+
 app.get('/api/games/:id', (req, res, next) => {
     console.log(req.params.id);
     GameModel.findById(req.params.id,
-      function (err, data) {
-        res.json(data);
-      });
-  })
+        function (err, data) {
+            res.json(data);
+        })
+})
 
 
 app.put('/api/games/:id', function (req, res) {
@@ -83,6 +102,7 @@ app.get('/api/games/:id', (req, res) => {
         res.json(data);
     })
 })
+
 
 
 
