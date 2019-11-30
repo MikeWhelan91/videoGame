@@ -10,7 +10,8 @@ import {
   MatCardModule,
   MatButtonModule,
   MatToolbarModule,
-  MatExpansionModule
+  MatExpansionModule,
+  MatIconModule,
   } from '@angular/material';
 import { CreateComponent } from './create/create.component';
 import {FormsModule} from '@angular/forms';
@@ -33,7 +34,8 @@ import { EditComponent } from './edit/edit.component';
     MatToolbarModule,
     MatExpansionModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
