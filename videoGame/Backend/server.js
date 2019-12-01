@@ -13,7 +13,10 @@ const Schema = mongoose.Schema;
 const gameSchema = new Schema({
     title: String,
     year: String,
-    poster: String
+    genre: String,
+    rating: String,
+    poster: String,
+    review: String
 });
 
 const GameModel = mongoose.model('game', gameSchema);
@@ -49,7 +52,7 @@ app.delete('/api/games/:id', (req,res) => {
    GameModel.deleteOne({_id:req.params.id},(error,data) => {
      if(error)
      res.json(error);
-  
+
       res.json(data);
     })
   })
@@ -68,7 +71,10 @@ app.put('/api/games/:id', function (req, res) {
     console.log(req.body);
     console.log(req.body.title);
     console.log(req.body.year);
+    console.log(req.body.genre);
+    console.log(req.body.rating);
     console.log(req.body.poster);
+    console.log(req.body.review);
     GameModel.findByIdAndUpdate(req.params.id, req.body, { new: true },
         function (err, data) {
             res.send(data);
@@ -83,12 +89,18 @@ app.post('/api/games', (req, res) => {
     console.log(req.body)
     console.log(req.body.title);
     console.log(req.body.year);
+    console.log(req.body.genre);
+    console.log(req.body.rating);
     console.log(req.body.poster);
+    console.log(req.body.review);
 
     GameModel.create({
         title: req.body.title,
         year: req.body.year,
-        poster: req.body.poster
+        genre: req.body.genre,
+        rating: req.body.rating,
+        poster: req.body.poster,
+        review: req.body.review
     });
     res.json('data uploaded')
 

@@ -24,7 +24,7 @@ export class EditComponent implements OnInit {
 
   onEditGame(form: NgForm) {
     this.gameService.updateGame(this.game._id, form.value.title,
-    form.value.year, form.value.poster).subscribe();
+    form.value.year, form.value.genre, form.value.rating, form.value.poster, form.value.review).subscribe();
     this.router.navigate(['/read']);
     }
 

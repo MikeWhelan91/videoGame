@@ -1,17 +1,54 @@
-<mat-card>
+
+<mat-card  class ="parent">
+
   <form (submit)="onAddGame(gameForm)" #gameForm="ngForm">
-    <mat-form-field>
-      <label> Game Title</label>
+
+    <mat-form-field class="words">
+
+      <label>Title</label>
       <input matInput type="text" name="title" ngModel required #title="ngModel">
     </mat-form-field>
-    <mat-form-field>
-      <label>Game Year</label>
+
+    <mat-form-field class="words">
+
+      <label>Year</label>
       <textarea matInput name="year" ngModel required #content="ngModel"></textarea>
+
     </mat-form-field>
-    <mat-form-field>
-      <label>Game Poster</label>
+
+    <mat-form-field class="words">
+
+      <label>Genre</label>
+      <textarea matInput name="genre" ngModel required #content="ngModel"></textarea>
+
+    </mat-form-field>
+
+
+    <mat-form-field class="words">
+
+    <label>Rating (/10)</label>
+      <textarea matInput  name="rating" ngModel required #content="ngModel"></textarea>
+
+    </mat-form-field>
+
+    <mat-form-field class="words">
+
+      <label>Art</label>
       <textarea matInput rows="4" name="poster" ngModel required #content="ngModel"></textarea>
+
     </mat-form-field>
+
+    <mat-form-field class="words">
+
+      <label>Review</label>
+      <textarea matInput  name="review" ngModel required #content="ngModel"></textarea>
+
+    </mat-form-field>
+
+
     <button mat-raised-button color="accent" type="submit">Save Game</button>
-  </form>
+
+    </form>
+
+
 </mat-card>

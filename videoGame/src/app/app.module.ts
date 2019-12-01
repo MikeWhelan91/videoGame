@@ -16,13 +16,15 @@ import {
 import { CreateComponent } from './create/create.component';
 import {FormsModule} from '@angular/forms';
 import { EditComponent } from './edit/edit.component';
+import { ReviewComponent } from './review/review.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReadComponent,
     CreateComponent,
-    EditComponent
+    EditComponent,
+    ReviewComponent,
   ],
   imports: [
     BrowserModule,

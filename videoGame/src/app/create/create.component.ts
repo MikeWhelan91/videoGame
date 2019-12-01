@@ -19,7 +19,7 @@ export class CreateComponent implements OnInit {
 
 
     this.gameService.AddGameInformation(form.value.title,
-      form.value.year, form.value.poster).subscribe();
+      form.value.year, form.value.genre, form.value.rating, form.value.poster, form.value.review).subscribe();
     console.log(form.value);
     form.resetForm();
     }
