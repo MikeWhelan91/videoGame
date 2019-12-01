@@ -33,10 +33,7 @@ app.use(function(req, res, next) {
   next();
   });
 
-// respond with "hello world" when a GET request is made to the homepage
-app.get('/', (req, res) => {
-    res.send('hello world');
-})
+
 
 app.get('/api/games', (req, res, next) => {
 
@@ -64,6 +61,18 @@ app.get('/api/games/:id', (req, res, next) => {
             res.json(data);
         })
 })
+
+app.get('/api/games/search/:genre/:criteria', (req,res)=>{
+    console.log(req.params.genre);
+    console.log(req.params.criteria);
+  if(req.params.criteria == 'genre')
+    {
+    GameModel.find({ 'genre': req.params.genre},
+  (error,data) =>{
+    res.json(data);
+  })
+    }
+  })
 
 
 app.put('/api/games/:id', function (req, res) {

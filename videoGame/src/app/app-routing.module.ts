@@ -4,6 +4,7 @@ import {ReadComponent} from './read/read.component';
 import {CreateComponent} from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 import { ReviewComponent } from './review/review.component';
+import { AdventureComponent } from './adventure/adventure.component';
 
 
 
@@ -25,6 +26,10 @@ const routes: Routes = [
     path: 'review',
     component: ReviewComponent
     },
+    {
+      path: 'adventure',
+      component: AdventureComponent
+      },
 
 ];
 

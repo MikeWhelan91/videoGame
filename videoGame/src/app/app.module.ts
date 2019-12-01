@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +19,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { EditComponent } from './edit/edit.component';
 import { ReviewComponent } from './review/review.component';
 import { AdventureComponent } from './adventure/adventure.component';
+import { HorrorComponent } from './horror/horror.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { AdventureComponent } from './adventure/adventure.component';
     EditComponent,
     ReviewComponent,
     AdventureComponent,
+    HorrorComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +46,7 @@ import { AdventureComponent } from './adventure/adventure.component';
     ReactiveFormsModule,
     MatAutocompleteModule,
   ],
+  schemas:[NO_ERRORS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })

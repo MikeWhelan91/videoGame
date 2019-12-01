@@ -1,1 +1,20 @@
-<p>adventure works!</p>
+<p class="genretitle">Adventure</p>
+<mat-accordion class="headers-align" *ngFor="let game of MyGames">
+        <mat-expansion-panel [expanded]="true" *ngIf="game.genre == 'Adventure'">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                <h3> {{ game.title }} </h3>
+            </mat-panel-title>
+           
+						<mat-panel-description>
+                <h3>{{ game.rating }}/10</h3>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <img src='{{game.poster}}'>
+        <mat-action-row>
+  <button mat-button [routerLink]="['/edit', game._id]" color="primary">EDIT</button>
+  <button mat-button (click)="onDelete(game._id)" color="warn">DELETE</button>
+        </mat-action-row>
+    </mat-expansion-panel>
+</mat-accordion>
+

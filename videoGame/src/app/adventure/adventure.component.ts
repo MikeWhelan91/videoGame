@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GameServiceService } from '../services/game-service.service';
 
 @Component({
   selector: 'app-adventure',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdventureComponent implements OnInit {
 
-  constructor() { }
+MyGames: any = [];
+
+  constructor(private gameService: GameServiceService) { }
 
   ngOnInit() {
-  }
+    this.gameService.getGameInformation().subscribe((data) => {
+      this.MyGames = data.games;
+      console.log(this.MyGames);
+    });
 
+}
+
+onDelete(id: string){
+
+  this.gameService.DeleteGame(id).subscribe(
+    () =>{
+      this.ngOnInit();
+    }
+  );
+}
 }
