@@ -2,7 +2,7 @@
 <mat-toolbar color="black">
   <mat-toolbar-row>
     
-    <h1>VideoGame DB</h1>
+    <h1 [routerLink]="['/root']">VideoGame DB</h1>
     <span class="menu-spacer"></span>
     <div>
       <button mat-button [routerLink]="['/create']" color="Warn">Add Title</button>
@@ -15,12 +15,8 @@
     </div>
   </mat-toolbar-row>
 
-  <mat-toolbar-row>
-      <span style="font-size: 12px;">Here you can navigate our library</span>
-    </mat-toolbar-row>
+  
 </mat-toolbar>
-
-
 
 <router-outlet></router-outlet>
 

@@ -7,10 +7,15 @@ import { ReviewComponent } from './review/review.component';
 import { AdventureComponent } from './adventure/adventure.component';
 import { FantasyComponent } from './fantasy/fantasy.component';
 import { HorrorComponent } from './horror/horror.component';
+import { HomeComponent } from './home/home.component';
 
 
 
 const routes: Routes = [
+  {
+    path: 'home',
+    component: HomeComponent
+  },
   {
     path: 'read',
     component: ReadComponent

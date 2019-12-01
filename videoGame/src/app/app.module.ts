@@ -21,6 +21,7 @@ import { ReviewComponent } from './review/review.component';
 import { AdventureComponent } from './adventure/adventure.component';
 import { HorrorComponent } from './horror/horror.component';
 import { FantasyComponent } from './fantasy/fantasy.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { FantasyComponent } from './fantasy/fantasy.component';
     AdventureComponent,
     HorrorComponent,
     FantasyComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
