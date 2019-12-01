@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { GameServiceService } from '../services/game-service.service';
 
 @Component({
-  selector: 'app-horror',
-  templateUrl: './horror.component.html',
-  styleUrls: ['./horror.component.css']
+  selector: 'app-fantasy',
+  templateUrl: './fantasy.component.html',
+  styleUrls: ['./fantasy.component.css']
 })
-export class HorrorComponent implements OnInit {
+export class FantasyComponent implements OnInit {
 
-  MyGames: any = [];
+MyGames: any = [];
 
   constructor(private gameService: GameServiceService) { }
 

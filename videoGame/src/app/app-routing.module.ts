@@ -5,6 +5,8 @@ import {CreateComponent} from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 import { ReviewComponent } from './review/review.component';
 import { AdventureComponent } from './adventure/adventure.component';
+import { FantasyComponent } from './fantasy/fantasy.component';
+import { HorrorComponent } from './horror/horror.component';
 
 
 
@@ -30,6 +32,16 @@ const routes: Routes = [
       path: 'adventure',
       component: AdventureComponent
       },
+
+      {
+        path: 'fantasy',
+        component: FantasyComponent
+        },
+
+        {
+          path: 'horror',
+          component: HorrorComponent
+          },
 
 ];
 

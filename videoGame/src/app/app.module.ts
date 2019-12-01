@@ -20,6 +20,7 @@ import { EditComponent } from './edit/edit.component';
 import { ReviewComponent } from './review/review.component';
 import { AdventureComponent } from './adventure/adventure.component';
 import { HorrorComponent } from './horror/horror.component';
+import { FantasyComponent } from './fantasy/fantasy.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { HorrorComponent } from './horror/horror.component';
     ReviewComponent,
     AdventureComponent,
     HorrorComponent,
+    FantasyComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +48,7 @@ import { HorrorComponent } from './horror/horror.component';
     ReactiveFormsModule,
     MatAutocompleteModule,
   ],
-  schemas:[NO_ERRORS_SCHEMA],
+ 
   providers: [],
   bootstrap: [AppComponent]
 })
