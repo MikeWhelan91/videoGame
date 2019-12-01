@@ -1,18 +1,18 @@
-<mat-accordion *ngFor="let game of MyGames">
+<mat-accordion class="headers-align" *ngFor="let game of MyGames">
     <mat-expansion-panel [expanded]="true">
         <mat-expansion-panel-header>
             <mat-panel-title>
-                <h3> {{ game.title }} </h3>
+                <h3>{{ game.rating }}/10</h3>
             </mat-panel-title>
 						 <mat-panel-description>
-                <h3>{{ game.rating }}/10</h3>
+                <h3>{{ game.title }} </h3>
             </mat-panel-description>
 						<mat-panel-description>
                 <h3>{{ game.genre }}</h3>
             </mat-panel-description>
 						</mat-expansion-panel-header>
         <mat-panel-description>
-                <h3>Review: {{ game.review }}</h3>
+                <p style="color:white;">Review: {{ game.review }}</p>
             </mat-panel-description>
         <img src='{{game.poster}}'>
         <mat-action-row>
