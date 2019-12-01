@@ -11,12 +11,14 @@ import {
   MatButtonModule,
   MatToolbarModule,
   MatExpansionModule,
+  MatAutocompleteModule,
   MatIconModule,
   } from '@angular/material';
 import { CreateComponent } from './create/create.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { EditComponent } from './edit/edit.component';
 import { ReviewComponent } from './review/review.component';
+import { AdventureComponent } from './adventure/adventure.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { ReviewComponent } from './review/review.component';
     CreateComponent,
     EditComponent,
     ReviewComponent,
+    AdventureComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +41,8 @@ import { ReviewComponent } from './review/review.component';
     FormsModule,
     MatInputModule,
     MatIconModule,
+    ReactiveFormsModule,
+    MatAutocompleteModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

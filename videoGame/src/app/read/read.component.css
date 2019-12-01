@@ -22,3 +22,8 @@ h3{
    mat-form-field {
     margin-right: 12px;
    }
+
+   .filter{
+       background-color: rgb(142, 147, 151);
+       width: 100%;
+   }
